@@ -1,0 +1,43 @@
+* {
+  font-family: Georgia;
+  font-size: 25px;
+}
+body {
+  background-image: url("work.jpg");
+}
+h1 {
+  margin-left: 170px;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 140%;
+  color: white;
+}
+li {
+  border: 3px solid #302f2e;
+  width: 400px;
+  text-align: center;
+  list-style-type: none;
+  padding: 12px;
+  margin: 5px;
+  background-color: #edebe8;
+}
+input {
+  margin-top: 50px;
+  margin-left: 35px;
+  padding: 8px;
+}
+
+button {
+  background: #302f2e;
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 8px;
+  box-shadow: 0 2px gray;
+}
+button:hover {
+  background-color: #7a7775;
+}
+li:hover {
+  background: #adb7ba;
+}

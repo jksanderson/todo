@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>To Do List</h1>
+  <ul id="all">
+    <li>Grocery shopping</li>
+    <li>Wash car</li>
+    <li>Javascript homework</li>
+</ul>
+    <input id="add" type="text" name="add" placeholder="Enter your item here">
+    <button id="submit" type="button">Click to add item to list</button>
+
+
+
+<script>
+var list = document.querySelector("#all");
+var mouseOver = document.getElementById("add");
+mouseOver.addEventListener('focus', function() {
+  mouseOver.value = "";
+})
+
+var newItem = document.getElementById("submit");
+newItem.addEventListener('click', function(event) {
+var input = document.getElementById("add").value;
+var create = document.createElement("li");
+var regExp = /[a-z][a-z]/i;
+
+if (regExp.test(input)) {
+  create.innerHTML = input;
+  list.appendChild(create);
+  }
+
+if (document.getElementById("add").value != "Enter your item here") {
+  document.getElementById("add").value= "";
+  }
+})
+
+
+var ul = document.getElementsByTagName("ul");
+  for (var i = 0 ; i < ul.length; i++) {
+     ul[i].addEventListener('click' , function(e) {
+      if (e.target.tagName === "LI") {
+       e.target.remove();
+     }
+   })
+  }
+
+document.getElementById("add").addEventListener('keyup', function (e) {
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    document.getElementById("submit").click();
+  }
+})
+
+
+  </script>
+</body>
+</html>
