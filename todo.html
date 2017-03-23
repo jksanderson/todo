@@ -43,7 +43,8 @@ var ul = document.getElementsByTagName("ul");
   for (var i = 0 ; i < ul.length; i++) {
      ul[i].addEventListener('click' , function(e) {
       if (e.target.tagName === "LI") {
-       e.target.remove();
+        e.target.style.textDecoration  = "line-through";
+       setTimeout(function() {e.target.remove()}, 300);
      }
    })
   }
